@@ -36,7 +36,8 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
