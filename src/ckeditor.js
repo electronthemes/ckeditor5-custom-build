@@ -12,6 +12,8 @@ import Heading from "@ckeditor/ckeditor5-heading/src/heading.js";
 import HtmlEmbed from "@ckeditor/ckeditor5-html-embed/src/htmlembed.js";
 import Image from "@ckeditor/ckeditor5-image/src/image.js";
 import ImageCaption from "@ckeditor/ckeditor5-image/src/imagecaption.js";
+import ImageTextAlternative from "@ckeditor/ckeditor5-image/src/imagetextalternative";
+import imageToolbar from "@ckeditor/ckeditor5-image/src/imagetoolbar";
 import ImageInsert from "@ckeditor/ckeditor5-image/src/imageinsert.js";
 import ImageUpload from "@ckeditor/ckeditor5-image/src/imageupload.js";
 import Indent from "@ckeditor/ckeditor5-indent/src/indent.js";
@@ -39,7 +41,9 @@ Editor.builtinPlugins = [
   Heading,
   HtmlEmbed,
   Image,
+  imageToolbar,
   ImageCaption,
+  ImageTextAlternative,
   ImageInsert,
   ImageUpload,
   Indent,
@@ -83,6 +87,9 @@ Editor.defaultConfig = {
     ],
   },
   language: "en",
+  image: {
+    toolbar: ["toggleImageCaption", "imageTextAlternative"],
+  },
   table: {
     contentToolbar: ["tableColumn", "tableRow", "mergeTableCells"],
   },
