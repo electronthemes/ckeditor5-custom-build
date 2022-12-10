@@ -7,6 +7,7 @@
   "private": false,
   "main": "./build/ckeditor.js",
   "devDependencies": {
+    "@ckeditor/ckeditor5-code-block": "^35.3.2",
     "@ckeditor/ckeditor5-autoformat": "^29.0.0",
     "@ckeditor/ckeditor5-basic-styles": "^29.0.0",
     "@ckeditor/ckeditor5-block-quote": "^29.0.0",

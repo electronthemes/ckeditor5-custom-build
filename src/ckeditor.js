@@ -2,6 +2,7 @@
  * @license Copyright (c) 2014-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
+import CodeBlock from "@ckeditor/ckeditor5-code-block/src/codeblock";
 import ClassicEditor from "@ckeditor/ckeditor5-editor-classic/src/classiceditor.js";
 import Autoformat from "@ckeditor/ckeditor5-autoformat/src/autoformat.js";
 import AutoImage from "@ckeditor/ckeditor5-image/src/autoimage.js";
@@ -33,6 +34,7 @@ class Editor extends ClassicEditor {}
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
+  CodeBlock,
   Autoformat,
   AutoImage,
   BlockQuote,
@@ -84,6 +86,7 @@ Editor.defaultConfig = {
       "redo",
       "|",
       "htmlEmbed",
+      "codeBlock",
     ],
   },
   language: "en",
@@ -92,6 +95,24 @@ Editor.defaultConfig = {
   },
   table: {
     contentToolbar: ["tableColumn", "tableRow", "mergeTableCells"],
+  },
+  codeBlock: {
+    languages: [
+      { language: "plaintext", label: "Plain text" }, // The default language.
+      { language: "c", label: "C" },
+      { language: "cs", label: "C#" },
+      { language: "cpp", label: "C++" },
+      { language: "css", label: "CSS" },
+      { language: "diff", label: "Diff" },
+      { language: "html", label: "HTML" },
+      { language: "java", label: "Java" },
+      { language: "javascript", label: "JavaScript" },
+      { language: "php", label: "PHP" },
+      { language: "python", label: "Python" },
+      { language: "ruby", label: "Ruby" },
+      { language: "typescript", label: "TypeScript" },
+      { language: "xml", label: "XML" },
+    ],
   },
 };
 export default Editor;
