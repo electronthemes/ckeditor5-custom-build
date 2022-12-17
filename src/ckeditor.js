@@ -4,8 +4,11 @@
  */
 import Autoformat from "@ckeditor/ckeditor5-autoformat/src/autoformat.js";
 import Bold from "@ckeditor/ckeditor5-basic-styles/src/bold.js";
+import Code from "@ckeditor/ckeditor5-basic-styles/src/code.js";
 import Italic from "@ckeditor/ckeditor5-basic-styles/src/italic.js";
 import Strikethrough from "@ckeditor/ckeditor5-basic-styles/src/strikethrough.js";
+import Subscript from "@ckeditor/ckeditor5-basic-styles/src/subscript";
+import Superscript from "@ckeditor/ckeditor5-basic-styles/src/superscript";
 import Underline from "@ckeditor/ckeditor5-basic-styles/src/underline.js";
 import BlockQuote from "@ckeditor/ckeditor5-block-quote/src/blockquote.js";
 import CodeBlock from "@ckeditor/ckeditor5-code-block/src/codeblock.js";
@@ -55,11 +58,14 @@ Editor.builtinPlugins = [
   ListProperties,
   Paragraph,
   SimpleUploadAdapter,
+  Underline,
   Strikethrough,
+  Subscript,
+  Superscript,
+  Code,
   Table,
   TableToolbar,
   TextTransformation,
-  Underline,
 ];
 
 Editor.defaultConfig = {
@@ -72,9 +78,12 @@ Editor.defaultConfig = {
       "link",
       "bulletedList",
       "numberedList",
-      "codeBlock",
       "strikethrough",
       "underline",
+      "subscript",
+      "superscript",
+      "code",
+      "codeBlock",
       "|",
       "outdent",
       "indent",
